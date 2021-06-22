@@ -1,24 +1,24 @@
-import logo from './logo.svg';
+import { BrowserRouter as Router, Route } from 'react-router-dom'
+import { ToastContainer } from 'react-toastify';
+import Homepage from './pages/homepage/Homepage'
+import RiderDetails from './pages/riderDetails/RiderDetails'
+
+import 'react-toastify/dist/ReactToastify.min.css';
 import './App.css';
 
 function App() {
   return (
-    <div className="App">
-      <header className="App-header">
-        <img src={logo} className="App-logo" alt="logo" />
-        <p>
-          Edit <code>src/App.js</code> and save to reload.
-        </p>
-        <a
-          className="App-link"
-          href="https://reactjs.org"
-          target="_blank"
-          rel="noopener noreferrer"
-        >
-          Learn React
-        </a>
-      </header>
-    </div>
+    <Router>
+      <ToastContainer position="top-center"
+        autoClose={2000}
+        newestOnTop={false}
+        closeOnClick
+        rtl={false}
+        draggable
+        pauseOnHover />
+      <Route path='/riders/:id' component={RiderDetails} exact />
+      <Route path='/' component={Homepage} exact />
+    </Router>
   );
 }
 

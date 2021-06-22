@@ -1,0 +1,32 @@
+.riderItem {
+  display: flex;
+  flex-direction: column;
+  width: clamp(30rem, 33%, 80rem);
+  margin: 2rem auto;
+  border: 1px solid var(--neutral-400);
+  border-radius: 4px;
+  &__header {
+    padding: 0.5rem 1rem;
+    display: flex;
+    justify-content: space-between;
+    background-color: var(--neutral-300);
+    color: var(--neutral-600);
+    font-size: var(--header5);
+    letter-spacing: 0.5px;
+  }
+  &__total {
+    font-weight: 600;
+  }
+  &__description {
+    display: flex;
+    justify-content: space-between;
+    padding: 1rem;
+    min-height: 8rem;
+    align-items: center;
+  }
+  &__content {
+    color: var(--neutral-600);
+    letter-spacing: 0.8px;
+    font-size: var(--paragraph);
+  }
+}
